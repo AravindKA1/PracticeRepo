@@ -1,0 +1,7 @@
+{
+    "apiUrls": {
+        "repos": "https://api.github.com/users/{username}/repos",
+        "commits": "https://api.github.com/repos/{username}/{repository}/commits",
+        "commitDetails": "https://api.github.com/repos/{username}/{repository}/commits/{commit_sha}"
+    }
+}
