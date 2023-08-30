@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Get GIT Commits</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
+    
+
+</head>
+
+<body>
+    <form id="inputForm">
+        <label for="username">User Name :</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="access_token">Access Token :</label>
+        <input type="password" id="access_token" required>
+        <br>
+        <label for="repository" id="repolabel" style="display: none;">Repositories :</label>
+        <select id="repository" name="repository" style="display: none;">Selet a repository</select>
+        <br>
+        <label for="start_date" id="start_date_label" style="display: none;">Start Date :</label>
+        <input type="date" id="start_date" style="display: none;" required >
+        <label for="end_date" id="end_date_label"  style="display: none;">End Date :</label>
+        <input type="date" id="end_date" style="display: none;" required>
+        <button type="button" id ="getReposButton" onclick="fetchGitHubRepos()">Fetch Repositories</button>
+        <br>
+        <input type="button" value="Submit" id="submit-button" style="display: none;">
+    </form>
+    <div id="errorContainer" style="display: none; color: red;"></div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
